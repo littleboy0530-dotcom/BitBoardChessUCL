@@ -1,0 +1,20 @@
+[package]
+name = "bitboard_chess_uci"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bitboard_chess_uci"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.10.1"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = 3
+lto = true
+codegen-units = 1
